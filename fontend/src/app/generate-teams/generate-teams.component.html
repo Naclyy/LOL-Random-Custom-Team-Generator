@@ -1,0 +1,32 @@
+<div *ngFor="let team of teams">
+    <div class="col-lg-12">
+        <div class="main-box clearfix">
+            <div class="table-responsive">
+                <table class="table user-list" style="width: 96%;">
+                    <thead class="thead-dark">  
+                        <tr style="text-align: center;font-size: 18px;">
+                            <th scope="col"><span>Role</span></th>
+                            <th scope="col"><span>Champion</span></th>
+                            <th scope="col"><span>Username</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let player of team.players; let i = index">
+                            <td>
+                                {{player?.role}}
+                            </td>
+                            <td>
+                                {{player?.champion}}
+                            </td>
+                            <td>
+                               
+                                {{player?.userName}}
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<body>
+    <div>
+        <h1>League Custom Teams Generator</h1>
+
+
+        <form id="new-task-form" #addForm="ngForm" (ngSubmit)="addPlayer(addForm)">
+            <section>
+                <label for="new-task-input">Player's Name:</label>
+                <input type="text" ngModel name="username" id="new-task-input"
+                    placeholder="Add a new player to the team" required />
+            </section>
+            <div class="checkbox-input">
+                <label for="new-task-input">Smurf?</label>
+                <input type="checkbox" (change)="checkboxClicked()">
+            </div>
+            <button [disabled]="addForm.invalid" type="submit" id="new-task-submit">Add Player</button>
+        </form>
+    </div>
+    <section class="task-list">
+        <h2>Players {{players.length}}</h2>
+        <div id="tasks">
+            <tr type="text" class="text" *ngFor="let player of players; let i = index">
+                <td>
+                    {{player.userName}}
+                </td>
+                <td>
+                    {{player.smurf}}
+                </td>
+                <div class="actions">
+                    <!--<button class="edit">Edit</button> -->
+                    <button class="delete" (click)="delete(i)">Delete</button>
+                </div>
+            </tr>
+        </div>
+        <div *ngIf="this.players.length >= 10">
+            <button id="new-task-submit" (click)="generateTeams()">Generate Team</button>
+        </div>
+    </section>
+</body>
