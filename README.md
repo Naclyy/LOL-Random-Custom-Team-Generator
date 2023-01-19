@@ -41,5 +41,4 @@ Our application receives the list of the ten players, to which you can specify t
 ## Team Members
 
 - [Amarandei Alexandru](https://github.com/Alex-Amarandei)
-- [Panagiotis Chontas](https://github.com/panagiotischontas)
 - [Zaharia Andrei](https://github.com/naclyy)
